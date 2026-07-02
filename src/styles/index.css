@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-offwhite: #FDFCF8;
+  --color-ivory: #F3F0E9;
+  --color-nude: #E3DBCC;
+  --color-obsidian: #101010;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #FDFCF8;
+  color: #101010;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+::selection {
+  background: #101010;
+  color: #FDFCF8;
+}
+
+@keyframes certificate-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.certificate-track {
+  animation: certificate-scroll 28s linear infinite;
+}
+
+.certificate-track:hover {
+  animation-play-state: paused;
+}
